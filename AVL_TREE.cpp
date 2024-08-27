@@ -129,14 +129,19 @@ void preorder(Node *root)
 int main()
 {
     Node* root=NULL;
-    root=insert(root,1);
-    root=insert(root,3);
-    root=insert(root,2);
-    root=insert(root,4);
-    // root=insert(root,7);
-    // root=insert(root,12);
-    // root=insert(root,15);
-    // root=insert(root,17);
+    int n;
+    cin>>n;
+    vector<int> n;
+    int a;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a;
+        n.push_back(a);
+    }
+    for(int i=0;i<n;i++)
+    {
+        root=insert(root,a[i]);
+    }
     preorder(root);
 }
 
